@@ -57,26 +57,28 @@
 
         <div class="ui-g">
             <div class="ui-g-6 p-grid kotak1">
-                <h:form>
-                    <p:messages id="messages" closable="true">
-                        <p:effect type="pulsate" event="load" delay="500" />
-                    </p:messages>
 
-                    <h:panelGrid columns="2" cellpadding="7">
-                        <p:outputLabel for="text" value="Nama" />
-                        <p:inputText id="text" value="#{effectView.text}" required="true" />
-                    </h:panelGrid>
+                <p:messages id="messages" closable="true">
+                    <p:effect type="pulsate" event="load" delay="500" />
+                </p:messages>
 
-                    <p:commandButton id="register" value="Register" action="#{effectView.echo}" update="messages"
-                        styleClass="p-mt-3" />
-                    <p:commandButton id="clear" value="Clear" action="#{effectView.echo}" update="messages"
-                        styleClass="p-mt-3" />
-                </h:form>
-                <h:form>
-                    <p:selectBooleanCheckbox value="#{selectBooleanView.value2}" itemLabel="Ajax">
-                        <p:ajax update="msg" listener="#{selectBooleanView.addMessage}" />
-                    </p:selectBooleanCheckbox>
-                </h:form>
+                <h:panelGrid columns="2" cellpadding="7">
+                    <p:outputLabel for="text" value="Nama" />
+                    <p:inputText id="text" value="#{effectView.text}" required="true" />
+                </h:panelGrid>
+
+                <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" itemLabel="AllowNegative" />
+                <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
+                    <f:selectItem itemLabel="True" itemValue="True" />
+                    <f:selectItem itemLabel="False" itemValue="False" />
+                </p:selectOneRadio>
+
+                <p:commandButton id="register" value="Register" action="#{effectView.echo}" update="messages"
+                    styleClass="p-mt-3" />
+                <p:commandButton id="clear" value="Clear" action="#{effectView.echo}" update="messages"
+                    styleClass="p-mt-3" />
+
+
             </div>
             <div class="ui-g-6 kotak2">
                 <div class="inline-block">

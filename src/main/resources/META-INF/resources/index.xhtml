@@ -58,27 +58,47 @@
         <div class="ui-g">
             <div class="ui-g-6 p-grid kotak1">
 
-                <p:messages id="messages" closable="true">
-                    <p:effect type="pulsate" event="load" delay="500" />
-                </p:messages>
+                <h:form>
+                    <p:messages id="messages" showDetail="true" closable="true">
+                        <p:autoUpdate />
+                    </p:messages>
 
-                <h:panelGrid columns="2" cellpadding="7">
-                    <p:outputLabel for="text" value="Nama" />
-                    <p:inputText id="text" value="#{effectView.text}" required="true" />
-                </h:panelGrid>
+                    <p:commandButton value="Info" action="#{messagesView.info}" styleClass="p-mr-2" />
+                    <p:commandButton value="Warn" action="#{messagesView.warn}" styleClass="p-mr-2 ui-button-warning" />
+                    <p:commandButton value="Error" action="#{messagesView.error}" styleClass="ui-button-danger" />
 
-                <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" itemLabel="AllowNegative" />
-                <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
-                    <f:selectItem itemLabel="True" itemValue="True" />
-                    <f:selectItem itemLabel="False" itemValue="False" />
-                </p:selectOneRadio>
+                    <h:panelGrid columns="2" cellpadding="7">
+                        <h:outputLabel for="name" value="Name" styleClass="p-mr-2" />
+                        <p:inputText id="name" value="#{observerView.text}">
+                            <p:ajax process="@this" update="@none" ignoreAutoUpdate="true" />
+                        </p:inputText>
+                    </h:panelGrid>
 
-                <p:commandButton id="register" value="Register" action="#{effectView.echo}" update="messages"
-                    styleClass="p-mt-3" />
-                <p:commandButton id="clear" value="Clear" action="#{effectView.echo}" update="messages"
-                    styleClass="p-mt-3" />
+                    <!-- Checkbox -->
+                    <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" itemLabel="AllowNegative" />
+                    <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
+                        <f:selectItem itemLabel="True" itemValue="True" />
+                        <f:selectItem itemLabel="False" itemValue="False" />
+                    </p:selectOneRadio>
+
+                    <p:messages id="msg" closable="true">
+                        <p:effect type="pulsate" event="load" delay="500" />
+                        <div class="selected">
+
+                        </div>
+                    </p:messages>
+
+                    <!-- <p:commandButton id="register" value="Register" action="#{effectView.echo}" update="messages"
+                        styleClass="p-mt-3" style="margin-right: .5rem;" />
+
+                    <p:commandButton id="clear" value="Clear" action="#{effectView.echo}" update="messages"
+                        styleClass="p-mt-3" /> -->
+                    <p:button value="Register" action="" styleClass="ui-button-raised" />
+                    <p:button value="Clear" styleClass="ui-button-raised" />
 
 
+
+                </h:form>
             </div>
             <div class="ui-g-6 kotak2">
                 <div class="inline-block">

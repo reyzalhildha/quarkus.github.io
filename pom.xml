@@ -253,14 +253,7 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <sassSourceDirectory>${basedir}/src/main/resources/META-INF/resources/resources/showcase/css</sassSourceDirectory>
-          <destination>${basedir}/src/main/resources/META-INF/resources/resources/showcase/css</destination>
-          <sassOptions>
-            <always_update>true</always_update>
-            <sourcemap>:none</sourcemap>
-          </sassOptions>
-        </configuration>
+     
         <dependencies>
           <dependency>
             <groupId>org.jruby</groupId>
@@ -297,11 +290,6 @@
         <groupId>org.primefaces.extensions</groupId>
         <artifactId>resources-optimizer-maven-plugin</artifactId>
         <version>2.3.6</version>
-        <configuration>
-          <inputDir>${project.build.directory}/classes/META-INF/resources</inputDir>
-          <imagesDir>${project.build.directory}/classes/META-INF/resources</imagesDir>
-          <useDataUri>true</useDataUri>
-        </configuration>
         <executions>
           <execution>
             <id>optimize</id>

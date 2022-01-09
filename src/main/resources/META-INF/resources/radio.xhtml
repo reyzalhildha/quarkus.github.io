@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+    <!-- CSS -->
+    <style>
+        p {
+            background-color: #fff;
+            border: 1px solid #000;
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            font-weight: normal;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .kotak1 {
+            padding-bottom: 19%;
+            padding: 60px;
+        }
+
+        .kotak2 {
+            padding-bottom: 5%;
+            border-radius: 0%;
+        }
+
+        .kotak3 {
+            padding-bottom: 19%;
+        }
+
+        .kotak4 {
+            padding-bottom: 19%;
+        }
+
+        .kotak-input {
+            border: 1px solid #000;
+            background-color: aqua;
+            width: 80%;
+            margin-left: 100px;
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</h:head>
+<h:body>
+    <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
+        <f:selectItem itemLabel="True" itemValue="Option1" />
+        <f:selectItem itemLabel="False" itemValue="Option2" />
+    </p:selectOneRadio>
+</h:body>
+
+</html>

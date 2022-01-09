@@ -61,16 +61,34 @@
 
         <div class="card">
             <h:form>
-                <h:panelGrid id="grid" columns="3" cellpadding="7">
-                    <p:outputLabel for="nama" value="Nama :" />
-                    <p:inputText id="nama" required="true" />
-                    <p:message for="nama" />
+                <ul>
+                    <li>
+                        <h:panelGrid id="grid" columns="3" cellpadding="7">
+                            <p:outputLabel for="nama" value="Nama :" />
+                            <p:inputText id="nama" required="true" />
+                            <p:message for="nama" />
+                        </h:panelGrid>
+                    </li>
+                </ul>
 
-                </h:panelGrid>
+                <ul>
+                    <li>
+                        <ui:include src="checkbox.xhtml"></ui:include>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <ui:include src="radio.xhtml"></ui:include>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p:commandButton id="regisButton" value="Register" update="grid" styleClass="p-mt-3"
+                            style="margin-right: .5rem;" />
+                        <p:commandButton id="clearButton" value="Clear" update="grid" styleClass="p-mt-3" />
+                    </li>
+                </ul>
 
-                <p:commandButton id="regisButton" value="Register" update="grid" styleClass="p-mt-3"
-                    style="margin-right: .5rem;" />
-                <p:commandButton id="clearButton" value="Clear" update="grid" styleClass="p-mt-3" />
             </h:form>
         </div>
     </div>

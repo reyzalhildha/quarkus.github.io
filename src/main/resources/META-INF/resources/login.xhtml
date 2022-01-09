@@ -5,44 +5,77 @@
 
 <h:head>
 
+    <!-- CSS -->
+    <style>
+        p {
+            background-color: #fff;
+            border: 1px solid #000;
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            font-weight: normal;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .kotak1 {
+            padding-bottom: 19%;
+            padding: 60px;
+        }
+
+        .kotak2 {
+            padding-bottom: 5%;
+            border-radius: 0%;
+        }
+
+        .kotak3 {
+            padding-bottom: 19%;
+        }
+
+        .kotak4 {
+            padding-bottom: 19%;
+        }
+
+        .kotak-input {
+            border: 1px solid #000;
+            background-color: aqua;
+            width: 80%;
+            margin-left: 100px;
+        }
+    </style>
+
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </h:head>
 <h:body>
     <div class="ui-g-6 kotak1">
 
-        <ul class="list-none p-0 m-0">
-            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                <h:panelGrid columns="2" cellpadding="7">
-                    <p:outputLabel for="text" value="Nama" />
-                    <p:inputText id="text" value="#{effectView.text}" required="true" />
+        <p:tooltip />
+        <p:messages id="messages" showDetail="true" closable="true">
+            <p:autoUpdate />
+        </p:messages>
+
+        <div class="card">
+            <h:form>
+                <h:panelGrid id="grid" columns="3" cellpadding="7">
+                    <p:outputLabel for="nama" value="Nama :" />
+                    <p:inputText id="nama" required="true" />
+                    <p:message for="nama" />
+
                 </h:panelGrid>
-            </li>
-        </ul>
-        <ul class="list-none p-0 m-0">
-            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" itemLabel="AllowNegative" />
-            </li>
-        </ul>
-        <ul class="list-none p-0 m-0">
-            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
-                    <f:selectItem itemLabel="True" itemValue="Option1" />
-                    <f:selectItem itemLabel="False" itemValue="Option2" />
-                </p:selectOneRadio>
-            </li>
-        </ul>
-        <ul class="list-none p-0 m-0">
-            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                <p:button action="#{messagesView.error}" value="Register" styleClass="ui-button-info"
+
+                <p:commandButton id="regisButton" value="Register" update="grid" styleClass="p-mt-3"
                     style="margin-right: .5rem;" />
-                <p:button action="#{messagesView.error}" value="Clear" styleClass="ui-button-info" />
-                <p:messages id="messages" showDetail="true" closable="true">
-                    <p:autoUpdate />
-                </p:messages>
-            </li>
-        </ul>
+                <p:commandButton id="clearButton" value="Clear" update="grid" styleClass="p-mt-3" />
+            </h:form>
+        </div>
     </div>
+
+
 </h:body>
 
 </html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</h:head>
+<h:body>
+    <div class="ui-g-6 kotak1">
+
+        <ul class="list-none p-0 m-0">
+            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                <h:panelGrid columns="2" cellpadding="7">
+                    <p:outputLabel for="text" value="Nama" />
+                    <p:inputText id="text" value="#{effectView.text}" required="true" />
+                </h:panelGrid>
+            </li>
+        </ul>
+        <ul class="list-none p-0 m-0">
+            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" itemLabel="AllowNegative" />
+            </li>
+        </ul>
+        <ul class="list-none p-0 m-0">
+            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
+                    <f:selectItem itemLabel="True" itemValue="Option1" />
+                    <f:selectItem itemLabel="False" itemValue="Option2" />
+                </p:selectOneRadio>
+            </li>
+        </ul>
+        <ul class="list-none p-0 m-0">
+            <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                <p:button action="#{messagesView.error}" value="Register" styleClass="ui-button-info"
+                    style="margin-right: .5rem;" />
+                <p:button action="#{messagesView.error}" value="Clear" styleClass="ui-button-info" />
+                <p:messages id="messages" showDetail="true" closable="true">
+                    <p:autoUpdate />
+                </p:messages>
+            </li>
+        </ul>
+    </div>
+</h:body>
+
+</html>

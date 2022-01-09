@@ -212,12 +212,12 @@
     </dependency>
 
     <!-- Jinit -->
-    <dependency>
+    <!-- <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.0.0</version>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
   </dependencies>
 
   <build>
@@ -260,15 +260,7 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <sassSourceDirectory>${basedir}/src/main/resources/META-INF/resources/resources/showcase/css</sassSourceDirectory>
-          <destination>${basedir}/src/main/resources/META-INF/resources/resources/showcase/css</destination>
-          <sassOptions>
-            <always_update>true</always_update>
-            <sourcemap>:none</sourcemap>
-          </sassOptions>
-        </configuration>
-        <dependencies>
+         <dependencies>
           <dependency>
             <groupId>org.jruby</groupId>
             <artifactId>jruby-complete</artifactId>

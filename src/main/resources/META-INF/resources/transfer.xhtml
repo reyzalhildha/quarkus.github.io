@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</h:head>
+<h:body>
+    <div class="ui-g-6 kotak2">
+        <div class="inline-block">
+            <div class="menu">
+                <!-- Menu -->
+                <table style="background-color: white; color: black;">
+                    <tr>
+                        <th>
+                            <p>Account ID</p>
+                        </th>
+                        <th>
+                            <p>Name</p>
+                        </th>
+                        <th>
+                            <p>Allow Negative</p>
+                        </th>
+                        <th>
+                            <p>Amount</p>
+                        </th>
+                    </tr>
+                </table>
+
+                <!-- Tombol Transfer -->
+                <p:button value="Transfer" style="margin-left: 450px;" />
+
+                <!-- BOX Input -->
+                <div class="kotak-input" style="margin-top: 20px;">
+                    <table>
+                        <tr>
+                            <th>
+                                <p>Rekening Tujuan</p>
+                            </th>
+                            <th>
+                                <p:inputText placeholder="Text" style="text-align: center;" />
+                            </th>
+                            <th>
+                                <p:button value="Check" />
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Nama Penerima</p>
+                            </td>
+                            <td>
+                                <p:inputText placeholder="Text" style="text-align: center;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Nominal</p>
+                            </td>
+                            <td>
+                                <p:inputText placeholder="Numeric" style="text-align: center;" />
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="tombol" style="margin-left: 50px; margin-bottom: 40px;">
+                        <p:button value="Register" style="margin-right: 50px;" />
+                        <p:button value="Clear" style="margin-right: 100px;" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</h:body>
+
+</html>

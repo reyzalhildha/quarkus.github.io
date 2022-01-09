@@ -210,6 +210,7 @@
       <artifactId>commons-lang3</artifactId>
       <version>3.12.0</version>
     </dependency>
+<<<<<<< HEAD
 
     <!-- Jinit -->
     <!-- <dependency>
@@ -218,6 +219,9 @@
       <version>4.0.0</version>
       <scope>test</scope>
     </dependency> -->
+=======
+ 
+>>>>>>> 813484f5dabf66395bdff24c07e3835be1b10cfd
   </dependencies>
 
   <build>
@@ -260,7 +264,12 @@
             </goals>
           </execution>
         </executions>
+<<<<<<< HEAD
          <dependencies>
+=======
+     
+        <dependencies>
+>>>>>>> 813484f5dabf66395bdff24c07e3835be1b10cfd
           <dependency>
             <groupId>org.jruby</groupId>
             <artifactId>jruby-complete</artifactId>
@@ -296,11 +305,6 @@
         <groupId>org.primefaces.extensions</groupId>
         <artifactId>resources-optimizer-maven-plugin</artifactId>
         <version>2.3.6</version>
-        <configuration>
-          <inputDir>${project.build.directory}/classes/META-INF/resources</inputDir>
-          <imagesDir>${project.build.directory}/classes/META-INF/resources</imagesDir>
-          <useDataUri>true</useDataUri>
-        </configuration>
         <executions>
           <execution>
             <id>optimize</id>

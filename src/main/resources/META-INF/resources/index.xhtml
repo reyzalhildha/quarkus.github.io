@@ -60,7 +60,183 @@
     <div class="card">
 
         <div class="ui-g">
+<<<<<<< HEAD
             include
+=======
+            <div class="ui-g-6 p-grid kotak1">
+
+                <h:form>
+                    <p:messages id="messages" showDetail="true" closable="true">
+                        <p:autoUpdate />
+                    </p:messages>
+
+                    <p:commandButton value="Info" action="#{messagesView.info}" styleClass="p-mr-2" />
+                    <p:commandButton value="Warn" action="#{messagesView.warn}" styleClass="p-mr-2 ui-button-warning" />
+                    <p:commandButton value="Error" action="#{messagesView.error}" styleClass="ui-button-danger" />
+
+                    <h:panelGrid columns="2" cellpadding="7">
+                        <h:outputLabel for="name" value="Name" styleClass="p-mr-2" />
+                        <p:inputText id="name" value="#{observerView.text}">
+                            <p:ajax process="@this" update="@none" ignoreAutoUpdate="true" />
+                        </p:inputText>
+                    </h:panelGrid>
+
+                    <!-- Checkbox -->
+                    <p:selectBooleanCheckbox value="#{selectBooleanView.value1}" itemLabel="AllowNegative" />
+                    <p:selectOneRadio id="console" value="#{radioView.console}" unselectable="true">
+                        <f:selectItem itemLabel="True" itemValue="True" />
+                        <f:selectItem itemLabel="False" itemValue="False" />
+                    </p:selectOneRadio>
+
+                    <p:messages id="msg" closable="true">
+                        <p:effect type="pulsate" event="load" delay="500" />
+                        <div class="selected">
+
+                        </div>
+                    </p:messages>
+
+                    <!-- <p:commandButton id="register" value="Register" action="#{effectView.echo}" update="messages"
+                        styleClass="p-mt-3" style="margin-right: .5rem;" />
+
+                    <p:commandButton id="clear" value="Clear" action="#{effectView.echo}" update="messages"
+                        styleClass="p-mt-3" /> -->
+                    <p:button value="Register" action="" styleClass="ui-button-raised" />
+                    <p:button value="Clear" styleClass="ui-button-raised" />
+
+
+
+                </h:form>
+            </div>
+            <div class="ui-g-6 kotak2">
+                <div class="inline-block">
+                    <div class="menu">
+                        <!-- Menu -->
+                        <table style="background-color: white; color: black;">
+                            <tr>
+                                <th>
+                                    <p>Account ID</p>
+                                </th>
+                                <th>
+                                    <p>Name</p>
+                                </th>
+                                <th>
+                                    <p>Allow Negative</p>
+                                </th>
+                                <th>
+                                    <p>Amount</p>
+                                </th>
+                            </tr>
+                        </table>
+
+                        <!-- Tombol Transfer -->
+                        <p:button value="Transfer" style="margin-left: 450px;" />
+
+                        <!-- BOX Input -->
+                        <div class="kotak-input" style="margin-top: 20px;">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <p>Rekening Tujuan</p>
+                                    </th>
+                                    <th>
+                                        <p:inputText placeholder="Text" style="text-align: center;" />
+                                    </th>
+                                    <th>
+                                        <p:button value="Check" />
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Nama Penerima</p>
+                                    </td>
+                                    <td>
+                                        <p:inputText placeholder="Text" style="text-align: center;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Nominal</p>
+                                    </td>
+                                    <td>
+                                        <p:inputText placeholder="Numeric" style="text-align: center;" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="tombol" style="margin-left: 50px; margin-bottom: 40px;">
+                                <p:button value="Register" style="margin-right: 50px;" />
+                                <p:button value="Clear" style="margin-right: 100px;" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g-6 kotak3">
+                <div class="ui-inputgroup">
+                    <table>
+                        <tr>
+                            <th>
+                                <p>Trx Time</p>
+                            </th>
+                            <th>
+                                <p>Account ID</p>
+                            </th>
+                            <th>
+                                <p>Name</p>
+                            </th>
+                            <th>
+                                <p>Initial Balance</p>
+                            </th>
+                            <th>
+                                <p>Debet</p>
+                            </th>
+                            <th>
+                                <p>Kredit</p>
+                            </th>
+                            <th>
+                                <p>Balance</p>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="ui-g-6 kotak4">
+                <div class="ui-inputgroup">
+                    <div class="card">
+                        <!-- <h5>Basic</h5>
+                        <p:barChart model="#{chartJsView.barModel}" style="width: 100%; height: 500px;" />
+                    </div> -->
+                        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                        <script>
+                            var xValues = ["Fajar", "bastiyan"];
+                            var yValues = [20, 50, 0, 100];
+                            var barColors = ["red", "green"];
+
+                            new Chart("myChart", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [{
+                                        backgroundColor: barColors,
+                                        data: yValues
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: ""
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+>>>>>>> 813484f5dabf66395bdff24c07e3835be1b10cfd
         </div>
     </div>
 
